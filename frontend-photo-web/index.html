@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Smart Photo Album</title>
-    <meta name="description" content="">
+    <title>Photo Album Web App</title>
+    <meta name="description" content="Search / Upload photos with a single click!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style-custom.css">
@@ -25,35 +25,35 @@
     <div class="container">
         <div class="app">
 
-            <h1 class="heading">Smart Photo Album</h1>
-            <h3 style="margin-top:30px;text-align:center">Upload a new photo</h3>
+            <h1 class="heading">Photo Album Web Application</h1>
+            <div style="color: black">Search and upload photographs with ease</div>
+            <h3 style="text-align:center;color: black">Search photos</h3>
+            <form class="form-inline" id="search-form">
+                <div class="form-group">
+                    <input id="search-input" type="search" class="form-control" placeholder="Search" size="59"/>
+                    <button id="voice-button" type="button" class="btn btn-success" onclick="runSpeechRecognition()">
+                        <i class="fa fa-microphone"></i>
+                    </button>
+                    <button id="search-button" type="button" class="btn btn-success" onclick="searchPhoto()">
+                        <i class="fa fa-search"></i>
+                    </button>  &nbsp; <span id="action"></span>
+                </div>
+            </form>
+            <h3 style="margin-top:30px;text-align:center;color: black">Upload a new photo</h3>
             <form class="form-inline" id="upload-form">
                 <div class="form-group">
                     <input id="file-input" type="file" class="form-control"/>
                     <input id="label-input" type="text" placeholder="Labels" class="form-control" data-role="tagsinput"/>
-                    <button id="upload-button" type="button" class="btn btn-primary" onclick="uploadPhoto()">
+                    <button id="upload-button" type="button" class="btn btn-success" onclick="uploadPhoto()">
                        Upload
                     </button>
-                </div>
-            </form>
-            <h3 style="margin-top:30px;text-align:center;color: #337ab7">OR</h3>
-            <h3 style="text-align:center">Search photos</h3>
-            <form class="form-inline" id="search-form">
-                <div class="form-group">
-                    <input id="search-input" type="search" class="form-control" placeholder="Search"/>
-                    <button id="voice-button" type="button" class="btn btn-primary" onclick="runSpeechRecognition()">
-                        <i class="fa fa-microphone"></i>
-                    </button>
-                    <button id="search-button" type="button" class="btn btn-primary" onclick="searchPhoto()">
-                        <i class="fa fa-search"></i>
-                    </button>  &nbsp; <span id="action"></span>
                 </div>
             </form>
         </div>
         <div></div>
         <p id="uploadText"></p>
         <div class="banner-section">
-            <p id="displaytext"></p>
+            <p id="displaytext" style="color: black"></p>
             <div id="img-container">
             </div>
         </div>

@@ -1,15 +1,6 @@
-ul {
-    list-style: none;
-    padding: 0;
-}
-
 .app {
-    font-family: "Comic Sans MS" !important;
+    font-family: "Trebuchet MS" !important;
     color: snow !important;
-}
-
-body{
-    background: linear-gradient(to right, #005AA7, #FFFDE4) no-repeat center center;
 }
 
 .heading{
@@ -17,30 +8,7 @@ body{
     letter-spacing: -1px;
     line-height: 1;
     text-align: center;
-    color: #00396b;
-}
-
-p {
-    color: #444;
-}
-
-/*img{*/
-/*    width:100%;*/
-/*    max-width:300px;*/
-/*}*/
-
-input#file-upload-button {
-    background-color: dimgrey;
-    color: white;
-}
-
-button{
-    background-color: dimgrey;
-    color: white;
-}
-
-button:focus {
-    outline: 0;
+    color: black;
 }
 
 .container {
@@ -49,16 +17,6 @@ button:focus {
     opacity:0.9;
 }
 
-.page-description {
-    font-size: 1.1rem;
-    margin: 0 auto;
-}
-
-.tz-link {
-    font-size: 1em;
-    color: #1da7da;
-    text-decoration: none;
-}
 
 .no-browser-support {
     display: none;
