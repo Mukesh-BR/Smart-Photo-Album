@@ -17,7 +17,7 @@ function resetData(){
 function searchPhoto(){
 
   var apigClient = apigClientFactory.newClient({
-      apiKey: "fZhAIBczxyaptdmgpCFwK5FayQSeH1MZ4WlkDaB4"
+      apiKey: "PSMW3jzkfL9bheYtuXnbJyLC7FzhMyd9v9k1p6j3"
   });
 
     var query = document.getElementById('search-input').value;
@@ -86,13 +86,13 @@ function uploadPhoto() {
      data => {
      console.log(data);
      var apigClient = apigClientFactory.newClient({
-         apiKey: "fZhAIBczxyaptdmgpCFwK5FayQSeH1MZ4WlkDaB4"
+         apiKey: "KkM2FpGrGH1LhlvhijTaZ88GY0nQTk8faTu0KW2Q"
      });
 
      var body = data;
-     var params = {"file" : file.name, 'Content-Type': file.type, 'x-amz-meta-customLabels': labels};
+     var params = {'item' : file.name, 'Content-Type': file.type, 'x-amz-meta-customLabels': labels, 'folder' : 'myphotos1234'};
      var additionalParams = {};
-     apigClient.photosPut(params, body , additionalParams).then(function(res){
+     apigClient.uploadFolderItemPut(params, body , additionalParams).then(function(res){
        if (res.status == 200) {
            document.getElementById("modalMsg").innerHTML = "Image uploaded successfully!";
            $('#modalContainer').modal('show');
